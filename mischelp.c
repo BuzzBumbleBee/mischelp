@@ -8,9 +8,10 @@
 int main(int argc, char *argv[])
 {
     char bootcom[MAX_COM_LENGTH] = {};
-        printf("\n----------------------------------------------\n");
-        printf("-------- %s by androidroot.mobi --------\n", LOG_TAG);
-        printf("----------------------------------------------\n");
+    printf("\n----------------------------------------------\n");
+    printf("-------- %s by androidroot.mobi --------\n", LOG_TAG);
+    printf("----------------------------------------------\n");
+
     if (argc < 2 || argc > 3){
         printf("\nUsage : %s <path of misc> <boot command>\n\n", LOG_TAG);
         return 0;
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
     }
 
     fwrite (bootcom , 1 , sizeof(bootcom) , f );
-
     fclose(f);
+
     return 0;
 }
